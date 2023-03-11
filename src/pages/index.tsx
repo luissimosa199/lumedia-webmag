@@ -1,7 +1,5 @@
 import { type NextPage } from "next";
-import Head from "next/head";
-import Link from "next/link";
-
+import PostCard from "~/components/postCard/postCard";
 import { api } from "~/utils/api";
 
 const Home: NextPage = () => {
@@ -21,15 +19,8 @@ const Home: NextPage = () => {
 
   return (
     <>
-      <h2>PUBLICACIONES</h2>
       <ul>
-        {data.map((post) => {
-          return (
-            <li key={post.id}>
-              <h2>{post.title}</h2>
-            </li>
-          )
-        })}
+        <PostCard/>
       </ul>
     </>
   );
