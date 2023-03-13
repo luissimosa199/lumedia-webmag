@@ -1,9 +1,13 @@
 import { FunctionComponent } from "react";
 import Logo from "../logo/logo";
 
-const Footer: FunctionComponent = () => {
+interface FooterProps {
+    toggleMenu: boolean
+  }
+
+const Footer: FunctionComponent<FooterProps> = ({toggleMenu}) => {
   return (
-    <footer className="p-3">
+    <footer className={ toggleMenu ? "p-3 blur-sm" : "p-3" }>
       <Logo />
 
       <div className="mt-4 mb-4 text-gray-400">
