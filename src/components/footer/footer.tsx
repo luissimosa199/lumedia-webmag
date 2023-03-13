@@ -7,7 +7,7 @@ interface FooterProps {
 
 const Footer: FunctionComponent<FooterProps> = ({toggleMenu}) => {
   return (
-    <footer className={ toggleMenu ? "p-3 blur-sm" : "p-3" }>
+    <footer className={toggleMenu ? "p-3 blur-sm" : "p-3"}>
       <Logo />
 
       <div className="mt-4 mb-4 text-gray-400">
@@ -54,7 +54,7 @@ const Footer: FunctionComponent<FooterProps> = ({toggleMenu}) => {
           />
           <button
             type="submit"
-            className="mr-2 mt-2 rounded bg-yellow-300 px-2 py-1 text-sm uppercase absolute -right-0 -top-1 hover:opacity-75 transition-all"
+            className="absolute -right-0 -top-1 mr-2 mt-2 rounded bg-yellow-300 px-2 py-1 text-sm uppercase transition-all hover:opacity-75"
           >
             Suscribete!
           </button>
