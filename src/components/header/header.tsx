@@ -1,12 +1,18 @@
-import { FunctionComponent } from "react";
+import { type Dispatch, type FunctionComponent, type SetStateAction } from "react";
+import Logo from "../logo/logo";
 
-const Header: FunctionComponent = () => {
+interface HeaderProps {
+  handleToggle: () => void,
+  toggleMenu: boolean
+}
+
+const Header: FunctionComponent<HeaderProps> = ({ handleToggle, toggleMenu }) => {
   return (
     <header className="flex justify-between items-center border-b p-2 h-16">
-      <h1 className='text-2xl'>WEBMAG</h1>
+      <Logo/>
 
       <nav className='flex justify-around p-2'>
-        <button className='mr-12'>|||</button>
+        <button className='mr-12' onClick={() => { handleToggle() }}>{toggleMenu ? "X" : "|||"}</button>
         <button className='mr-6'>0</button>
       </nav>
     </header>

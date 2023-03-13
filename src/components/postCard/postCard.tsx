@@ -29,7 +29,7 @@ const PostCard = () => {
               >
                 <div className="row-start-2 flex flex-col self-end">
                   <div className="flex gap-2 mb-2 items-center">
-                    <p className="uppercase bg-yellow-300 px-2 py-[1px] rounded text-sm mr-2">{post.tags[0]}</p>
+                    <p className="uppercase bg-yellow-300 px-2 py-[1px] rounded text-sm mr-2 cursor-pointer hover:opacity-75 transition-all">{post.tags[0]}</p>
                     <p className="text-xs">{post.createAt.toLocaleDateString()}</p>
                   </div>
                   <p className="text-xl font-semibold">{post.title}</p>
