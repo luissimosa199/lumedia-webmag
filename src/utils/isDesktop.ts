@@ -13,7 +13,7 @@ const useIsDesktop = () => {
     }, [])
 
     if (width !== undefined){
-        return width > 700
+        return width > 767
     }
 }
 

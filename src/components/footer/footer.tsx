@@ -9,9 +9,11 @@ const Footer: FunctionComponent<FooterProps> = ({toggleMenu}) => {
   return (
     <footer className={toggleMenu ? "p-3 blur-sm" : "p-3"}>
       <Logo />
+    <div className="md:flex md:gap-4 md:justify-around">
 
+    
       <div className="mt-4 mb-4 text-gray-400">
-        <div className="mb-4 flex gap-4">
+        <div className="mb-4 flex gap-4 md:flex-col">
           <h3 className="font-semibold">Política de Privacidad</h3>
           <h3 className="font-semibold">Publicidad</h3>
         </div>
@@ -59,6 +61,7 @@ const Footer: FunctionComponent<FooterProps> = ({toggleMenu}) => {
             Suscribete!
           </button>
         </form>
+      </div>
       </div>
     </footer>
   );
