@@ -1,4 +1,4 @@
-import { FunctionComponent, ReactNode, useState } from "react";
+import { type FunctionComponent, type ReactNode, useState } from "react";
 import Header from "../header/header";
 import Footer from "../footer/footer";
 import AsideMenu from "../asideMenu/asideMenu";
