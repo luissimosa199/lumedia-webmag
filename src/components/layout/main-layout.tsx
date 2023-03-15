@@ -8,7 +8,7 @@ interface MainLayoutProps {
 }
 
 const MainLayout: FunctionComponent<MainLayoutProps> = ({ children }) => {
-  const [toggleMenu, setToggleMenu] = useState(true);
+  const [toggleMenu, setToggleMenu] = useState(false);
 
   const handleToggle = () => {
     if (toggleMenu) {
