@@ -25,7 +25,7 @@ const PostCard = () => {
             return (
               <li
                 key={post.id}
-                className="my-8 mx-3 grid h-64 grid-rows-2 border bg-slate-100 p-2"
+                className="my-4 mx-3 grid h-64 grid-rows-2 border bg-slate-100 p-2"
               >
                 <div className="row-start-2 flex flex-col self-end">
                   <div className="mb-2 flex items-center gap-2">
