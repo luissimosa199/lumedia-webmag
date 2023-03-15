@@ -19,7 +19,7 @@ const PostCard = () => {
 
   return (
     <div>
-      <ul>
+      <ul className="grid md:grid-cols-2 md:px-24">
         {data &&
           data.map((post) => {
             return (
