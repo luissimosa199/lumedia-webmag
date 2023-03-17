@@ -8,7 +8,10 @@ const AsideMenu: FunctionComponent<AsideMenuProps> = ({ handleToggle }) => {
   return (
     <div className="fixed -top-0 -right-0 z-10 flex h-screen w-[70%] max-w-lg flex-col overflow-y-auto bg-white p-4 text-xl font-semibold">
       <button className="mb-2 self-end" onClick={handleToggle}>
-        X
+        <img
+          src="https://img.icons8.com/material-outlined/24/null/multiply--v1.png"
+          alt="Close Menu Button"
+        />
       </button>
       <ul className="mb-8 flex flex-col gap-1">
         <li>Inicio</li>
