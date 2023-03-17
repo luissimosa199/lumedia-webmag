@@ -10,8 +10,8 @@ const MyApp: AppType = ({ Component, pageProps }) => {
   return (
     <MainLayout>
       <Head>
-        <title>lumedia</title>
-        <meta name="description" content="lumedia homepage" />
+        <title>WEBMAG</title>
+        <meta name="description" content="Webmag demo homepage" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Component {...pageProps} />
