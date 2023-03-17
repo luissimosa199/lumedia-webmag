@@ -1,4 +1,5 @@
 import { api } from "~/utils/api";
+import CircularProgress from "@mui/material/CircularProgress";
 
 const PostCard = () => {
   const { data, error, isLoading } = api.post.getLatest.useQuery();
@@ -12,13 +13,13 @@ const PostCard = () => {
   }
 
   if (isLoading) {
-    <div>
-      <p>Loading...</p>
-    </div>;
+    return (<div className="h-screen flex justify-center items-center">
+      <CircularProgress />
+    </div>)
   }
 
   return (
-    <div>
+    <div className="min-h-screen">
       <ul className="grid md:grid-cols-2 md:px-24">
         {data &&
           data.map((post) => {
