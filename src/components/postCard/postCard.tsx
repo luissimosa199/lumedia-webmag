@@ -31,7 +31,7 @@ const PostCard = () => {
                 <div className="row-start-2 flex flex-col self-end">
                   <div className="mb-2 flex items-center gap-2">
                     <p className="mr-2 cursor-pointer rounded bg-yellow-300 px-2 py-[1px] text-sm uppercase transition-all hover:opacity-75">
-                      {post.tags[0]}
+                      {post.tags[1]}
                     </p>
                     <p className="text-xs">
                       {post.createAt.toLocaleDateString()}
