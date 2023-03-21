@@ -1,10 +1,10 @@
 import { type NextPage } from "next";
-import PostCard from "~/components/postCard/postCard";
+import PostList from "~/components/postList/postList";
 
 const Home: NextPage = () => {
   return (
     <>
-      <PostCard />
+      <PostList />
     </>
   );
 };
