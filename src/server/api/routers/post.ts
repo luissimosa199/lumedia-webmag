@@ -8,7 +8,7 @@ export const postRouter = createTRPCRouter({
       where: {
         tags: {
           // CATEGORY MAIN
-          has: env.CAT_MAIN,
+          has: env.NEXT_PUBLIC_CAT_MAIN,
         },
       },
     });
@@ -19,7 +19,7 @@ export const postRouter = createTRPCRouter({
       where: {
         tags: {
           // CATEGORY MAIN
-          has: env.CAT_MAIN,
+          has: env.NEXT_PUBLIC_CAT_MAIN,
         },
       },
       orderBy: [
@@ -36,7 +36,7 @@ export const postRouter = createTRPCRouter({
       where: {
         tags: {
           // CATEGORY 1
-          has: env.CAT_1,
+          has: env.NEXT_PUBLIC_CAT_1,
         },
       },
       orderBy: [
@@ -53,7 +53,7 @@ export const postRouter = createTRPCRouter({
       where: {
         tags: {
           // CATEGORY 2
-          has: env.CAT_2,
+          has: env.NEXT_PUBLIC_CAT_2,
         },
       },
       orderBy: [
@@ -70,7 +70,7 @@ export const postRouter = createTRPCRouter({
       where: {
         tags: {
           // CATEGORY 3
-          has: env.CAT_3,
+          has: env.NEXT_PUBLIC_CAT_3,
         },
       },
       orderBy: [

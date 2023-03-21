@@ -20,7 +20,7 @@ const Header: FunctionComponent<HeaderProps> = ({
         <Logo />
       </div>
       {isDekstop && <NavBar />}
-      <nav className="flex justify-around p-2">
+      <div className="flex justify-around p-2">
         <button
           className="mr-12"
           onClick={() => {
@@ -34,7 +34,7 @@ const Header: FunctionComponent<HeaderProps> = ({
           )}
         </button>
         <button className="mr-6"><img src="https://img.icons8.com/material-outlined/24/null/search--v1.png" alt="Search Button"/></button>
-      </nav>
+      </div>
     </header>
   );
 };
