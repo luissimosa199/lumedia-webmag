@@ -1,4 +1,5 @@
 import { Post } from "@prisma/client";
+import Link from "next/link";
 import { FunctionComponent } from "react";
 
 interface PostCardProps {
@@ -24,7 +25,9 @@ const PostCard: FunctionComponent<PostCardProps> = ({data}) => {
                     {post.createAt.toLocaleDateString()}
                   </p>
                 </div>
+              <Link href={`/post/${post.id}`}>
                 <p className="text-xl font-semibold">{post.title}</p>
+              </Link>
               </div>
             </li>
           );

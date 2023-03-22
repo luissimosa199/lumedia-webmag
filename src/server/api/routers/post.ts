@@ -31,56 +31,23 @@ export const postRouter = createTRPCRouter({
     });
   }),
 
-  getCat1News: publicProcedure.query(({ ctx }) => {
-    return ctx.prisma.post.findMany({
-      where: {
-        tags: {
-          // CATEGORY 1
-          has: env.NEXT_PUBLIC_CAT_1,
+  getCatNews: publicProcedure
+    .input(z.object({ cat: z.string(), take: z.number() }))
+    .query(({ input, ctx }) => {
+      return ctx.prisma.post.findMany({
+        where: {
+          tags: {
+            has: input.cat,
+          },
         },
-      },
-      orderBy: [
-        {
-          createAt: "desc",
-        },
-      ],
-      take: 10,
-    });
-  }),
-
-  getCat2News: publicProcedure.query(({ ctx }) => {
-    return ctx.prisma.post.findMany({
-      where: {
-        tags: {
-          // CATEGORY 2
-          has: env.NEXT_PUBLIC_CAT_2,
-        },
-      },
-      orderBy: [
-        {
-          createAt: "desc",
-        },
-      ],
-      take: 10,
-    });
-  }),
-
-  getCat3News: publicProcedure.query(({ ctx }) => {
-    return ctx.prisma.post.findMany({
-      where: {
-        tags: {
-          // CATEGORY 3
-          has: env.NEXT_PUBLIC_CAT_3,
-        },
-      },
-      orderBy: [
-        {
-          createAt: "desc",
-        },
-      ],
-      take: 10,
-    });
-  }),
+        orderBy: [
+          {
+            createAt: "desc",
+          },
+        ],
+        take: input.take,
+      });
+    }),
 
   getOne: publicProcedure
     .input(z.object({ id: z.string() }))
