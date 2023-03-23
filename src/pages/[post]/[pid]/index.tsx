@@ -25,18 +25,22 @@ const Post = () => {
   }
 
   return (
-    <div>
-      <article>
-        <div className="flex h-64 flex-col justify-end gap-2 bg-slate-100 p-4">
-          <div className="flex items-center">
-            <p className="mr-2 cursor-pointer rounded bg-yellow-300 px-2 py-[1px] text-sm uppercase transition-all hover:opacity-75">
-              {data?.tags[1]}
-            </p>
-            <p className="text-xs">{data?.createAt.toLocaleDateString()}</p>
-          </div>
-          <h1 className="text-2xl font-semibold">{data?.title}</h1>
+    <div className="lg:grid lg:grid-cols-3 lg:grid-rows-[repeat(3, minmax(fit-content, 1fr))] lg:gap-y-2">
+
+      {/* header */}
+      <div className="flex h-64 flex-col justify-end gap-2 bg-slate-100 p-4 lg:col-span-3 lg:">
+        <div className="flex items-center">
+          <p className="mr-2 cursor-pointer rounded bg-yellow-300 px-2 py-[1px] text-sm uppercase transition-all hover:opacity-75">
+            {data?.tags[1]}
+          </p>
+          <p className="text-xs">{data?.createAt.toLocaleDateString()}</p>
         </div>
-        <div className="m-4">
+        <h1 className="text-2xl font-semibold">{data?.title}</h1>
+      </div>
+
+      {/* content */}
+      <article className="lg:col-span-2 lg:row-start-2 lg:row-span-4">
+        <div className="m-4 lg:mx-12">
           {data?.content.split("\n\n").map((e, idx) => {
             return (
               <p className="mb-4" key={idx}>
@@ -45,10 +49,14 @@ const Post = () => {
             );
           })}
         </div>
+        <AuthorCard />
       </article>
 
-      <AuthorCard />
-      <RelatedPosts cat={(data?.tags[1]) as string}/>
+      {/* sidebar */}
+      <div className="lg:row-start-2">
+        <RelatedPosts cat={data?.tags[1] as string} />
+      </div>
+
     </div>
   );
 };

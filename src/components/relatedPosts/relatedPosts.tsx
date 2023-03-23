@@ -1,4 +1,4 @@
-import { FunctionComponent } from "react";
+import { type FunctionComponent } from "react";
 import PostCardSmall from "../postCardSmall/postCardSmall";
 import { api } from "~/utils/api";
 import { CircularProgress } from "@mui/material";
@@ -32,7 +32,7 @@ const RelatedPosts: FunctionComponent<RelatedPostsProps> = ({ cat }) => {
   return (
     <div className="mb-4">
       <h2 className="ml-2 mb-4 text-2xl font-semibold">Posts relacionados</h2>
-      <div className="flex flex-col gap-2">
+      <div className="flex flex-col gap-2 sm:w-3/4 lg:w-full">
         {data?.map((post) => {
           return <PostCardSmall key={post.id} post={post} />;
         })}
