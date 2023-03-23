@@ -2,6 +2,7 @@ import { type FunctionComponent } from "react";
 import Logo from "../logo/logo";
 import useIsDekstop from "~/utils/isDesktop";
 import NavBar from "../navBar/navBar";
+import Image from "next/image";
 
 interface HeaderProps {
   handleToggle: () => void;
@@ -28,12 +29,12 @@ const Header: FunctionComponent<HeaderProps> = ({
           }}
         >
           {toggleMenu ? (
-            <img src="https://img.icons8.com/material-outlined/24/null/multiply--v1.png" alt="Close Menu Button" />
+            <Image src="https://img.icons8.com/material-outlined/24/null/multiply--v1.png" alt="Close Menu Button" />
           ) : (
-            <img src="https://img.icons8.com/external-tal-revivo-filled-tal-revivo/24/null/external-mobile-application-hamburger-menu-setting-interface-basic-filled-tal-revivo.png" alt="Open Menu Button"/>
+            <Image src="https://img.icons8.com/external-tal-revivo-filled-tal-revivo/24/null/external-mobile-application-hamburger-menu-setting-interface-basic-filled-tal-revivo.png" alt="Open Menu Button"/>
           )}
         </button>
-        <button className="mr-6"><img src="https://img.icons8.com/material-outlined/24/null/search--v1.png" alt="Search Button"/></button>
+        <button className="mr-6"><Image src="https://img.icons8.com/material-outlined/24/null/search--v1.png" alt="Search Button"/></button>
       </div>
     </header>
   );

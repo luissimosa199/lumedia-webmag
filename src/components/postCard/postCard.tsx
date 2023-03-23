@@ -1,6 +1,6 @@
 import { Post } from "@prisma/client";
 import Link from "next/link";
-import { FunctionComponent } from "react";
+import { type FunctionComponent } from "react";
 
 interface PostCardProps {
     data: Post[]

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { type FunctionComponent } from "react";
 
 interface AsideMenuProps {
@@ -8,7 +9,7 @@ const AsideMenu: FunctionComponent<AsideMenuProps> = ({ handleToggle }) => {
   return (
     <div className="fixed -top-0 -right-0 z-10 flex h-screen w-[70%] max-w-lg flex-col overflow-y-auto bg-white p-4 text-xl font-semibold">
       <button className="mb-2 self-end" onClick={handleToggle}>
-        <img
+        <Image
           src="https://img.icons8.com/material-outlined/24/null/multiply--v1.png"
           alt="Close Menu Button"
         />

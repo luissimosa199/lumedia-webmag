@@ -1,8 +1,6 @@
 import { FunctionComponent } from "react";
 
-interface AuthorCardProps {}
-
-const AuthorCard: FunctionComponent<AuthorCardProps> = () => {
+const AuthorCard: FunctionComponent = () => {
   return (
     <div className="grid h-48 grid-cols-4 mx-2 gap-4">
       <div className="col-start-1 flex items-center justify-center">
