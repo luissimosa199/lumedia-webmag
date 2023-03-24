@@ -1,8 +1,8 @@
 import { api } from "~/utils/api";
 import CircularProgress from "@mui/material/CircularProgress";
-import PostCard from "../postCard/postCard";
+import PostCard from "~/components/postCard/postCard";
 
-const PostList = () => {
+const Novedades = () => {
   const { data, error, isLoading } = api.post.getLatest.useQuery({
     take: 10
   });
@@ -23,6 +23,7 @@ const PostList = () => {
 
   return (
     <div className="min-h-screen">
+      <h1 className="capitalize text-2xl font-semibold ml-28 my-2">Novedades</h1>
       <ul className="grid md:grid-cols-2 md:px-24">
         <PostCard data={data} />
       </ul>
@@ -30,4 +31,4 @@ const PostList = () => {
   );
 };
 
-export default PostList;
+export default Novedades;

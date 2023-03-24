@@ -14,22 +14,28 @@ export const postRouter = createTRPCRouter({
     });
   }),
 
-  getLatest: publicProcedure.query(({ ctx }) => {
-    return ctx.prisma.post.findMany({
-      where: {
-        tags: {
-          // CATEGORY MAIN
-          has: env.NEXT_PUBLIC_CAT_MAIN,
+  getLatest: publicProcedure
+    .input(
+      z.object({
+        take: z.number(),
+      })
+    )
+    .query(({ ctx, input }) => {
+      return ctx.prisma.post.findMany({
+        where: {
+          tags: {
+            // CATEGORY MAIN
+            has: env.NEXT_PUBLIC_CAT_MAIN,
+          },
         },
-      },
-      orderBy: [
-        {
-          createAt: "desc",
-        },
-      ],
-      take: 10,
-    });
-  }),
+        orderBy: [
+          {
+            createAt: "desc",
+          },
+        ],
+        take: input.take,
+      });
+    }),
 
   getCatNews: publicProcedure
     .input(

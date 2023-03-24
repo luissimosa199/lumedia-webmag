@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { type FunctionComponent } from "react";
+import AsidePosts from "../asidePosts/asidePosts";
 
 interface AsideMenuProps {
   handleToggle: () => void;
@@ -26,20 +27,7 @@ const AsideMenu: FunctionComponent<AsideMenuProps> = ({ handleToggle }) => {
 
       <div>
         <h2 className="mb-2">Publicaciones recientes</h2>
-        <ul className="flex flex-col gap-4">
-          <li className="flex gap-2">
-            <div className="h-20 w-20 flex-shrink-0 border-2"></div>
-            <h3 className="text-lg">Lorem, ipsum dolor.</h3>
-          </li>
-          <li className="flex gap-2">
-            <div className="h-20 w-20 flex-shrink-0 border-2"></div>
-            <h3 className="text-lg">Lorem ipsum dolor sit.</h3>
-          </li>
-          <li className="flex gap-2">
-            <div className="h-20 w-20 flex-shrink-0 border-2"></div>
-            <h3 className="text-lg">Lorem ipsum dolor sit ipsum dolor.</h3>
-          </li>
-        </ul>
+        <AsidePosts />
       </div>
     </div>
   );
