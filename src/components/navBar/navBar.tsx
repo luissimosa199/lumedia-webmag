@@ -15,13 +15,13 @@ const NavBar = () => {
           <Link href="/popular">Popular</Link>
         </li>
         <li className="border-collapse cursor-pointer border border-b-4 border-b-yellow-300 px-3 capitalize leading-[3.5rem] hover:text-yellow-700 hover:opacity-75">
-          <Link href={`/cat/${CAT_1}`}>{CAT_1}</Link>
+          <Link href={`/cat/${CAT_1 as string}`}>{CAT_1}</Link>
         </li>
         <li className="border-collapse cursor-pointer border border-b-4 border-b-emerald-600 px-3 capitalize leading-[3.5rem] hover:text-emerald-700 hover:opacity-75">
-          <Link href={`/cat/${CAT_2}`}>{CAT_2}</Link>
+          <Link href={`/cat/${CAT_2 as string}`}>{CAT_2}</Link>
         </li>
         <li className="border-collapse cursor-pointer border border-b-4 border-b-blue-600 px-3 capitalize leading-[3.5rem] hover:text-blue-700 hover:opacity-75">
-          <Link href={`/cat/${CAT_3}`}>{CAT_3}</Link>
+          <Link href={`/cat/${CAT_3 as string}`}>{CAT_3}</Link>
         </li>
       </ul>
     </nav>
