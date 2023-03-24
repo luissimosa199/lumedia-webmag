@@ -49,7 +49,7 @@ const Post = () => {
             );
           })}
         </div>
-        <AuthorCard />
+        <AuthorCard authorId={data?.authorId as string} />
       </article>
 
       {/* sidebar */}
