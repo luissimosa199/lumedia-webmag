@@ -5,6 +5,7 @@ import { CircularProgress } from "@mui/material";
 
 interface AuthorCardProps {
   authorId: string;
+  authorId: string;
 }
 
 const AuthorCard: FunctionComponent<AuthorCardProps> = ({ authorId }) => {
@@ -38,6 +39,7 @@ const AuthorCard: FunctionComponent<AuthorCardProps> = ({ authorId }) => {
       </div>
 
       <div className="col-span-3 flex flex-col justify-center gap-2">
+        <h2 className="text-2xl font-semibold">{data?.name}</h2>
         <h2 className="text-2xl font-semibold">{data?.name}</h2>
         <p>
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga minima
