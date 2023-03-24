@@ -5,12 +5,14 @@ import { CircularProgress } from "@mui/material";
 
 interface RelatedPostsProps {
   cat: string;
+  pid: string;
 }
 
-const RelatedPosts: FunctionComponent<RelatedPostsProps> = ({ cat }) => {
+const RelatedPosts: FunctionComponent<RelatedPostsProps> = ({ cat, pid }) => {
   const { data, error, isLoading } = api.post.getCatNews.useQuery({
     cat: cat,
     take: 3,
+    exclude: pid,
   });
 
   if (error) {

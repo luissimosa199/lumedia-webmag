@@ -54,7 +54,7 @@ const Post = () => {
 
       {/* sidebar */}
       <div className="lg:row-start-2">
-        <RelatedPosts cat={data?.tags[1] as string} />
+        <RelatedPosts cat={data?.tags[1] as string} pid={data?.id as string} />
       </div>
 
     </div>

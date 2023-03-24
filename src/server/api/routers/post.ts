@@ -32,8 +32,33 @@ export const postRouter = createTRPCRouter({
   }),
 
   getCatNews: publicProcedure
-    .input(z.object({ cat: z.string(), take: z.number() }))
+    .input(
+      z.object({
+        cat: z.string(),
+        take: z.number(),
+        exclude: z.string().optional(),
+      })
+    )
     .query(({ input, ctx }) => {
+      if (input.exclude) {
+        return ctx.prisma.post.findMany({
+          where: {
+            tags: {
+              has: input.cat,
+            },
+            NOT: {
+              id: input.exclude,
+            },
+          },
+          orderBy: [
+            {
+              createAt: "desc",
+            },
+          ],
+          take: input.take,
+        });
+      }
+
       return ctx.prisma.post.findMany({
         where: {
           tags: {
