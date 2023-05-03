@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { type FunctionComponent } from "react";
 import AsidePosts from "../asidePosts/asidePosts";
+import Link from "next/link";
 
 interface AsideMenuProps {
   handleToggle: () => void;
@@ -8,7 +9,7 @@ interface AsideMenuProps {
 
 const AsideMenu: FunctionComponent<AsideMenuProps> = ({ handleToggle }) => {
   return (
-    <div className="fixed -top-0 -right-0 z-10 flex h-screen w-full lg:w-[70%] max-w-lg flex-col overflow-y-auto bg-white p-4 text-xl font-semibold">
+    <div className="fixed -top-0 -right-0 z-10 flex h-screen w-full max-w-lg flex-col overflow-y-auto bg-white p-4 text-xl font-semibold lg:w-[70%]">
       <button className="mb-2 self-end" onClick={handleToggle}>
         <Image
           width={24}
@@ -18,11 +19,21 @@ const AsideMenu: FunctionComponent<AsideMenuProps> = ({ handleToggle }) => {
         />
       </button>
       <ul className="mb-8 flex flex-col gap-1">
-        <li>Inicio</li>
-        <li>Sobre Nosotros</li>
-        <li>Trabaja con nosotros</li>
-        <li>Publicidad</li>
-        <li>Contacto</li>
+        <li>
+          <Link href="/">Inicio</Link>
+        </li>
+        <li>
+          <Link href="https://lumedia.vercel.app/about">Sobre Nosotros</Link>
+        </li>
+        <li>
+          <Link href="https://lumedia.vercel.app/contact">Trabaja con nosotros</Link>
+        </li>
+        <li>
+          <Link href="https://lumedia.vercel.app/contact">Publicidad</Link>
+        </li>
+        <li>
+          <Link href="https://lumedia.vercel.app/contact">Contacto</Link>
+        </li>
       </ul>
 
       <div>
