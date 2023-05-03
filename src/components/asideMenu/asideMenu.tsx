@@ -23,16 +23,16 @@ const AsideMenu: FunctionComponent<AsideMenuProps> = ({ handleToggle }) => {
           <Link href="/">Inicio</Link>
         </li>
         <li>
-          <Link href="https://lumedia.vercel.app/about">Sobre Nosotros</Link>
+          <Link target="_blank" href="https://lumedia.vercel.app/about">Sobre Nosotros</Link>
         </li>
         <li>
-          <Link href="https://lumedia.vercel.app/contact">Trabaja con nosotros</Link>
+          <Link target="_blank" href="https://lumedia.vercel.app/contact">Trabaja con nosotros</Link>
         </li>
         <li>
-          <Link href="https://lumedia.vercel.app/contact">Publicidad</Link>
+          <Link target="_blank" href="https://lumedia.vercel.app/contact">Publicidad</Link>
         </li>
         <li>
-          <Link href="https://lumedia.vercel.app/contact">Contacto</Link>
+          <Link target="_blank" href="https://lumedia.vercel.app/contact">Contacto</Link>
         </li>
       </ul>
 
