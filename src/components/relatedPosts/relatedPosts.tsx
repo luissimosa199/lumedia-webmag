@@ -34,7 +34,7 @@ const RelatedPosts: FunctionComponent<RelatedPostsProps> = ({ cat, pid }) => {
   return (
     <div className="mb-4">
       <h2 className="ml-2 mb-4 text-2xl font-semibold">Posts relacionados</h2>
-      <div className="flex flex-col gap-2 sm:w-3/4 lg:w-full">
+      <div className="flex flex-col gap-2 ml-2 sm:w-3/4 lg:w-full">
         {data?.map((post) => {
           return <PostCardSmall key={post.id} post={post} />;
         })}
